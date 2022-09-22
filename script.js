@@ -12,3 +12,31 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+//^is this where I would make the loop? So that when the user clicks on the 'Generate Password' button, it would pick up the answer from one of the prompts below and spit out a password?
+
+
+
+// var favoriteMovie = prompt("What is your favorite movie?")
+
+//Math.floor(Math.random() * (10-0) + 0)
+
+//Example from console
+var favoriteMovie = prompt("What is your favorite movie?");
+// undefined
+// favoriteMovie
+// 'The Lion King'
+// favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
+// 'K'
+// favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
+// 'T'
+// favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
+// ' '
+// favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
+// ' '
+// favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
+// 'K'
+// favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
+// 'n'
+
+var favoriteColor =prompt("What is your favorite color?");

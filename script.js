@@ -1,10 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword(){
-  var passwordLength = prompt("How long do you want your password to be?");
+function generatePassword(){ //<--Added this line to define the function in order to fix the bug. 
+  var passwordLength = prompt("How long do you want your password to be?"); 
   var lowerCase = confirm("Do you want to use lowercase letters?");
-  var lowerCaseletters = ["a","b","c","d","e","f"]; //continue with the rest of the alphabet 
+  var lowerCaseletters = ["a","b","c","d","e","f"]; //continue with the rest of the alphabet  
   var upperCase = confirm("Do you want to use uppercase letters?");
   var upperCaseletters = ["A","B","C","D"]; //CONTINUE WITH THE REST OF THE ALPHABET
   var password;

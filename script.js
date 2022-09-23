@@ -1,19 +1,30 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword(){ //<--Added this line to define the function in order to fix the bug. 
-  var passwordLength = prompt("How long do you want your password to be?"); 
+function generatePassword(){ //<--Added this line to define the function in order to fix the bug. Then within this function, we will put the prompts in there. 
+  var passwordLength = prompt("How long do you want your password to be?"); // I answer in the prompt box "11"
   var lowerCase = confirm("Do you want to use lowercase letters?");
-  var lowerCaseletters = ["a","b","c","d","e","f"]; //continue with the rest of the alphabet  
+  var lowerCaseletters = ["a","b","c","d","e","f","g","h","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]; //continue with the rest of the alphabet  
   var upperCase = confirm("Do you want to use uppercase letters?");
-  var upperCaseletters = ["A","B","C","D"]; //CONTINUE WITH THE REST OF THE ALPHABET
+  var upperCaseletters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]; //CONTINUE WITH THE REST OF THE ALPHABET
   var password;
   for (var i = 0; i < passwordLength; i++) { 
     var index = Math.floor(Math.random() * lowerCaseletters.length);
     var computerChoice = lowerCaseletters[index];
     password += computerChoice
+    return password;
+}
+// for (var i = 0; i < passwordLength; i++) { 
+//   var index = Math.floor(Math.random() * upperCaseletters.length);
+//   var computerChoice = upperCaseletters[index];
+//   password += computerChoice
+//   return password;
+// }
 
-}return password
+//Question- When I generate the password, the uppercase letters don't show up. Why?
+
+//Note- Need to add parseInt() <-- The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
+
 }
 // Write password to the #password input
 function writePassword() {
@@ -57,3 +68,4 @@ generateBtn.addEventListener("click", writePassword);
 // // 'n'
 
 // var favoriteColor =prompt("What is your favorite color?");
+

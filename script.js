@@ -7,9 +7,11 @@ var upperCaseletters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N",
 
 var number = [1,2,3,4,5,6,7,8,9,0] //<-Now have to make a confirm below for it and include it in the if statement if they are both false. Exactly the same thing as I did with the lower/upperCase. 
 
+// var =numberChoice <--not sure if this is needed. 
+
 var specialChar = [ "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", " ' ", " ", ' " ', "\\" ]; //<-Now have to make a confirm below for it and include it in the if statement if they are both false.
 
-var choicesArray = []
+var choicesArray = [] //<--empty array
 
 var result
 
@@ -30,8 +32,13 @@ function generatePassword(){ //<--Added this line to define the function in orde
   }
   if(lowerCase===false && upperCase===false){
     alert("You have to choose at least one type of character to generate your password.")
-   
   }
+
+  // var number= confirm("Do you want to use numbers?");
+  // if(number===true){
+  //   choicesArray=choicesArray.concate(number);
+  // }
+  //^added this and when I do, it does confirm the question. However, I get an error message saying that it's undefined. Check it again. If it does, I'll have to make a forloop for the specialChar as well.
   
   var finalChar=choicesArray;
 console.log(finalChar)
@@ -71,32 +78,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-//^is this where I would make the loop? So that when the user clicks on the 'Generate Password' button, it would pick up the answer from one of the prompts below and spit out a password?
-
-
-
-// var favoriteMovie = prompt("What is your favorite movie?")
-
-//Math.floor(Math.random() * (10-0) + 0)
-
-//Example from console
-// var favoriteMovie = prompt("What is your favorite movie?");
-// // undefined
-// // favoriteMovie
-// // 'The Lion King'
-// // favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
-// // 'K'
-// // favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
-// // 'T'
-// // favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
-// // ' '
-// // favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
-// // ' '
-// // favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
-// // 'K'
-// // favoriteMovie[Math.floor(Math.random() * (10-0) + 0)];
-// // 'n'
-
-// var favoriteColor =prompt("What is your favorite color?");
-

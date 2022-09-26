@@ -1,4 +1,6 @@
 // Assignment Code
+
+//Global
 var generateBtn = document.querySelector("#generate");
 var passwordLength = 0
 var lowerCaseletters = ["a","b","c","d","e","f","g","h","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]; //continue with the rest of the alphabet  
@@ -7,7 +9,8 @@ var upperCaseletters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N",
 
 var number = [1,2,3,4,5,6,7,8,9,0] //<-Now have to make a confirm below for it and include it in the if statement if they are both false. Exactly the same thing as I did with the lower/upperCase. 
 
-// var =numberChoice <--not sure if this is needed. 
+// var numberChoice
+// = <--not sure if this is needed. 
 
 var specialChar = [ "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", " ' ", " ", ' " ', "\\" ]; //<-Now have to make a confirm below for it and include it in the if statement if they are both false.
 
@@ -40,6 +43,7 @@ function generatePassword(){ //<--Added this line to define the function in orde
   // }
   //^added this and when I do, it does confirm the question. However, I get an error message saying that it's undefined. Check it again. If it does, I'll have to make a forloop for the specialChar as well.
   
+
   var finalChar=choicesArray;
 console.log(finalChar)
   for (var i = 0,n=finalChar.length; i < parseInt(passwordLength); i++) { 
@@ -59,7 +63,7 @@ return result;
 //   return password;
 // }
 
-//Question- When I generate the password, the uppercase letters don't show up. Why?
+
 
 //Note- Need to add parseInt() <-- The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
 

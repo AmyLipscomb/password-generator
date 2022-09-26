@@ -8,7 +8,7 @@ Welcome! Do you ever get set sick of thinking of new passwords? Or do you find y
 
 <strong>My Task</strong>
 
-Today, almost everything requires a password, and the purpose of this password generator is to create a random password. JavaScript was heavily utilized in this process. When people visit the site, they're asked a variety of questions, including how long they'd like their password to be, and if they wanted to use lower and/or uppercase letters. 
+Today, almost everything requires a password, and the purpose of this password generator is to create a random password. JavaScript was heavily utilized in this process. When people visit the site, they're asked a variety of questions, including how long they'd like their password to be, and if they want to use lower and/or uppercase letters. 
 
 ![passwordlength](./assets/images/passwordlength.png)
 
@@ -18,13 +18,13 @@ Today, almost everything requires a password, and the purpose of this password g
 
 
 
-In order for these questions to appear, I had to use a combination of the prompt() and confirm() methods. The prompt method is used if a boolean response is wanted, meaning, a dialogue box will appear for someone to type something back as a response. Whereas, a confirm method provides two options- to either confirm or cancel. Below is a snippet of the coding. 
+In order for these questions to appear, I used a combination of the prompt() and confirm() methods. The prompt method is used if a string response is wanted. In this case, a dialogue box will appear for someone to type a response to the question asked. Whereas, a confirm method is used if a boolean response is wanted. For example, after the user is asked a question, he or she is provided two options- to either confirm or cancel. Below is a snippet of the coding. 
 
 ![javascriptCoding](./assets/images/password-generatorcoding.png)
 
-As you can see within the screenshot, I also had to include a parseInt method in addition to the prompt method. The reason why is because the prompt question asks for numbers within a specific range. The formula that was used, reads, "If the password length is less than 8 or greater than 128, then it will come back as NaN (not a number)". 
+As you can see within the screenshot above, I also had to include a parseInt method in addition to the prompt method. The reason why is because the prompt question asks for numbers within a specific range. The formula that was used, reads, "If the password length is less than 8 or greater than 128, then it will come back as NaN (not a number)". 
 
-For the confirm questions, I inserted a "for...of" statement. This statement creates a loop that operates on a sequence of values sourced from an iterable object, which in this case is an array. Regarding the password generator, the confirm will be true if the user selects the "okay" button for either the lowercase or uppercase letters. However, if a user chooses not to select both, then an alert will pop up, telling the user that at least one type is required in order to generate a password.
+For the confirm questions, I inserted a "for...of" statement. This statement creates a loop that operates on a sequence of values sourced from an iterable object, which in this case is an array. Regarding the password generator, the confirm will be true if the user selects the "okay" button for either the lowercase or uppercase letters. However, if a user chooses not to select either, then an alert will pop up, telling the user that at least one type is required in order to generate a password.
 
 Within the codes, I learned the importance of the following operators:
 

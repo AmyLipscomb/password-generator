@@ -24,7 +24,7 @@ In order for these questions to appear, I had to use a combination of the prompt
 
 As you can see within the screenshot, I also had to include a parseInt method in addition to the prompt method. The reason why is because the prompt question asks for numbers within a specific range. The formula that was used, reads, "If the password length is less than 8 or greater than 128, then it will come back as NaN (not a number)". 
 
-For the confirm questions, I inserted a for loop. The purpose of the for loop, is to execute the same code, just with different values. 
+For the confirm questions, I inserted a "for...of" statement. This statement creates a loop that operates on a sequence of values sourced from an iterable object, which in this case is an array. Regarding the password generator, the confirm will be true if the user selects the "okay" button for either the lowercase or uppercase letters. However, if a user chooses not to select both, then an alert will pop up, telling the user that at least one type is required in order to generate a password.
 
 Within the codes, I learned the importance of the following operators:
 

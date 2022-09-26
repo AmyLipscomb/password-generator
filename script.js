@@ -19,12 +19,15 @@ var choicesArray = [] //<--empty array
 var result
 
 
-function generatePassword(){ //<--Added this line to define the function in order to fix the bug. Then within this function, we will put the prompts in there. 
+function generatePassword(){ //<--Added this line to define the function in order to fix the bug. Then within this function, we will put the prompt/confirms in there. 
+
+  //Below the parseInt method is used, within a "while" loop. The code is basically saying, in order for a user to get a number for their password, the number has to be greater than 8, but less than 128. According to W3 schools, https://www.w3schools.com/js/js_loop_while.asp, a while loop "loops through a block of code as long as a specified condition is true." This is helpful for the prompt below, because if the number the user inputs meets the guidelines, then it will go through and produce a number, if not, it will not produce a number, "NaN" (not a number). 
+
   while(parseInt(passwordLength)<8 || parseInt(passwordLength)>128 || parseInt(passwordLength)=="" || isNaN(parseInt(passwordLength))){
     passwordLength = prompt("Please select a password length between 8 and 128?"); // I answer in the prompt box 
-   
+
   }
-   
+   //A "for...of" statement is used below. The confirm will be true if the user selects the "okay" button for either the lowercase or uppercase letters. However, if a user chooses not to select both, then an alert will pop up, telling the user that at least one type is required in order to generate a password.
   var lowerCase = confirm("Do you want to use lowercase letters?");
   if(lowerCase===true){
     choicesArray=choicesArray.concat(lowerCaseletters)
@@ -56,17 +59,6 @@ console.log(result)
 return result;
 
 
-// for (var i = 0; i < passwordLength; i++) { 
-//   var index = Math.floor(Math.random() * upperCaseletters.length);
-//   var computerChoice = upperCaseletters[index];
-//   password += computerChoice
-//   return password;
-// }
-
-
-
-//Note- Need to add parseInt() <-- The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
-
 }
 // Write password to the #password input
 function writePassword() {
@@ -82,3 +74,12 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+//Operators: 
+// - && <-- "and"
+// - || <-- "or"
+// - === <-- "the most accurate true- true based on value and type" 
+// - == <-- "true based on value"
+
+//Note- Need to add parseInt() <-- The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).

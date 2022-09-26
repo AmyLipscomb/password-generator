@@ -18,21 +18,24 @@ Today, almost everything requires a password, and the purpose of this password g
 
 
 
-In order for these questions to appear, I had to use a combination of the prompt() and confirm() methods. The prompt method is used if a boolean response is wanted, meaning, a dialogue box will appear for someone to type something back as a response. Whereas, a confirm method provides a two options- to either confirm or cancel. Below is a snippet of the coding. 
+In order for these questions to appear, I had to use a combination of the prompt() and confirm() methods. The prompt method is used if a boolean response is wanted, meaning, a dialogue box will appear for someone to type something back as a response. Whereas, a confirm method provides two options- to either confirm or cancel. Below is a snippet of the coding. 
 
 ![javascriptCoding](./assets/images/password-generatorcoding.png)
 
-As you can see within the screenshot, I also had to add a parseInt method in addition to the prompt method. This method makes so that ...
+As you can see within the screenshot, I also had to include a parseInt method in addition to the prompt method. The reason why is because the prompt question asks for numbers within a specific range. The formula that was used, reads, "If the password length is less than 8 or greater than 128, then it will come back as NaN (not a number)". 
+
+For the confirm questions, I inserted a for loop. The purpose of the for loop, is to execute the same code, just with different values. 
+
+Within the codes, I learned the importance of the following operators:
+
+- && <-- "and"
+- || <-- "or"
+- === <-- "the most accurate true- true based on value and type" 
+- == <-- "true based on value"
 
 
 
-
-
-
-
-
-
-
+While working on the password generator, I made sure to save my work constantly, utilizing 'git push', and made sure that each time I made commits, each commit had descriptive messages. 
 
 
 

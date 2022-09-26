@@ -7,22 +7,24 @@ var lowerCaseletters = ["a","b","c","d","e","f","g","h","j","k","l","m","n","o",
  
 var upperCaseletters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]; //CONTINUE WITH THE REST OF THE ALPHABET
 
-var number = [1,2,3,4,5,6,7,8,9,0] //<-Now have to make a confirm below for it and include it in the if statement if they are both false. Exactly the same thing as I did with the lower/upperCase. 
+var numberArray = [1,2,3,4,5,6,7,8,9,0] //<-Now have to make a confirm below for it and include it in the if statement if they are both false. Exactly the same thing as I did with the lower/upperCase. 
 
-// var numberChoice
-// = <--not sure if this is needed. 
+var character
+
 
 var specialChar = [ "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", " ' ", " ", ' " ', "\\" ]; //<-Now have to make a confirm below for it and include it in the if statement if they are both false.
 
 var choicesArray = [] //<--empty array
 
-var result
+var result = "" //<--Adding the string (empty quotes), gave it an empty content for the variable. Adding this, took away the "undefined" message I was recieving when trying to generate the password.
 
 
 function generatePassword(){ //<--Added this line to define the function in order to fix the bug. Then within this function, we will put the prompt/confirms in there. 
 
-  //Below the parseInt method is used, within a "while" loop. The code is basically saying, in order for a user to get a number for their password, the number has to be greater than 8, but less than 128. According to W3 schools, https://www.w3schools.com/js/js_loop_while.asp, a while loop "loops through a block of code as long as a specified condition is true." This is helpful for the prompt below, because if the number the user inputs meets the guidelines, then it will go through and produce a number, if not, it will not produce a number, "NaN" (not a number). 
+  result = "" // Resets the result password. 
 
+  //Below the parseInt method is used, within a "while" loop. The code is basically saying, in order for a user to get a number for their password, the number has to be greater than 8, but less than 128. According to W3 schools, https://www.w3schools.com/js/js_loop_while.asp, a while loop "loops through a block of code as long as a specified condition is true." This is helpful for the prompt below, because if the number the user inputs meets the guidelines, then it will go through and produce a number, if not, it will not produce a number, "NaN" (not a number). 
+choicesArray = [] //Resets the choices array. 
   while(parseInt(passwordLength)<8 || parseInt(passwordLength)>128 || parseInt(passwordLength)=="" || isNaN(parseInt(passwordLength))){
     passwordLength = prompt("Please select a password length between 8 and 128?"); // I answer in the prompt box 
 
@@ -40,10 +42,17 @@ function generatePassword(){ //<--Added this line to define the function in orde
     alert("You have to choose at least one type of character to generate your password.")
   }
 
-  // var number= confirm("Do you want to use numbers?");
-  // if(number===true){
-  //   choicesArray=choicesArray.concate(number);
-  // }
+  var number= confirm("Do you want to use numbers?");
+  if(number===true){
+    choicesArray=choicesArray.concat(numberArray); //Revised this line, to change "concate" to "concat" so that the password would generate and produce a password. It 
+  }
+
+  var character = confirm("Do you want to use special characters?");
+  if(character===true){
+    choicesArray=choicesArray.concat(specialChar);  
+  }
+
+
   //^added this and when I do, it does confirm the question. However, I get an error message saying that it's undefined. Check it again. If it does, I'll have to make a forloop for the specialChar as well.
   
 

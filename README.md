@@ -4,7 +4,7 @@ Welcome! Do you ever get set sick of thinking of new passwords? Or do you find y
 
 ![Website-Preview](./assets/images/password-generatorscreenshot.png)
 
-[Deployed Website] 
+[Deployed Website](https://amylipscomb.github.io/password-generator/)
 
 <strong>My Task</strong>
 
